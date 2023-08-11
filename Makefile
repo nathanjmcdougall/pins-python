@@ -26,6 +26,7 @@ README.md:
 test: test-most test-rsc
 
 test-most:
+	export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 	pytest pins -m "not fs_rsc" --workers 4 --tests-per-worker 1
 
 test-rsc:
